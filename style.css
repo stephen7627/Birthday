@@ -1,0 +1,135 @@
+/* Global layout */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #ffb5e8, #ffe9a9);
+  /* joyful pastel gradient */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Main container */
+.app-container {
+  width: 100%;
+  max-width: 480px;
+  padding: 16px;
+}
+
+/* Card style */
+.card {
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 18px;
+  padding: 20px 18px 24px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+/* Pages */
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Typography */
+.title {
+  font-size: 1.4rem;
+  color: #ff4f8b;
+  margin-bottom: 12px;
+}
+
+.quote {
+  font-size: 0.98rem;
+  line-height: 1.5;
+  color: #444;
+  margin-bottom: 24px; /* space before button */
+}
+
+/* Buttons */
+.primary-btn {
+  margin-top: 6px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 999px;
+  background: #ff4f8b;
+  color: #fff;
+  font-size: 0.96rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(255, 79, 139, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease,
+    background 0.15s ease;
+}
+
+.primary-btn:active {
+  transform: translateY(1px) scale(0.98);
+  box-shadow: 0 4px 10px rgba(255, 79, 139, 0.3);
+  background: #ff316f;
+}
+
+/* Cake image */
+.cake-image {
+  width: 70%;
+  max-width: 260px;
+  display: block;
+  margin: 16px auto 20px;
+}
+
+/* Fly-in pop-up animation (from bottom & scale) */
+.fly-in {
+  animation: cakePopIn 0.8s ease-out forwards;
+}
+
+@keyframes cakePopIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px) scale(0.6);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1.05);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Fly-up exit animation for cake */
+.fly-up {
+  animation: cakeFlyUp 0.8s ease-in forwards;
+}
+
+@keyframes cakeFlyUp {
+  0% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-120px) scale(0.7);
+  }
+}
+
+/* Birthday text typewriter appearance from left to right */
+.birthday-text {
+  margin-top: 14px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #ff2f6a;
+  min-height: 1.4em; /* keeps layout stable before typing */
+  white-space: nowrap;
+  overflow: hidden;
+}
+

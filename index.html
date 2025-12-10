@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Birthday Card for Mimi</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- Page 1: Quote -->
+    <section id="page-1" class="page active">
+      <div class="card">
+        <h1 class="title">Birthday Wishes</h1>
+        <p class="quote">
+          Even though distance keeps our paths apart,<br />
+          You’re still a bright memory close to my heart.<br />
+          On your special day, may joy find its way,<br />
+          And blessings surround you in every new day.<br />
+          May your dreams rise high and your worries fall low,<br />
+          Success follow gently wherever you go.<br />
+          Wishing you happiness in all that you do—<br />
+          Happy birthday, my friend, may life be kind to you.
+        </p>
+        <button id="to-page-2" class="primary-btn">
+          Click here to go to next page
+        </button>
+      </div>
+    </section>
+
+    <!-- Page 2: Cake with fly-in pop-up -->
+    <section id="page-2" class="page">
+      <div class="card">
+        <h1 class="title">For You 🎂</h1>
+
+        <!-- This is birthday image -->
+        <img
+          src="cake.png"
+          alt="Birthday cake"
+          class="cake-image fly-in"
+          id="cake-image"
+        />
+
+        <button id="to-page-3" class="primary-btn">
+          Click here to go to next page
+        </button>
+      </div>
+    </section>
+
+    <!-- Page 3: Text after cake flies up -->
+    <section id="page-3" class="page">
+      <div class="card">
+        <h1 class="title">A Special Message</h1>
+        <p id="birthday-text" class="birthday-text"></p>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
